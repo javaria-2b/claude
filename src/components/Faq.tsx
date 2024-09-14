@@ -30,7 +30,7 @@ export default function Faq() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4 w-full py-24 md:py-48">
+    <div className="max-w-2xl mx-auto p-6 lg:p-12 w-full py-24 md:py-48">
       <h2 className="text-3xl font-semibold text-center mb-8">
         Frequently asked questions
       </h2>

@@ -12,9 +12,9 @@ export default function Hero() {
     "Achieve your goals",
     "Innovate with AI",
   ];
-  
+
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
-  const [fade, setFade] = useState(true); // Add fade state
+  const [fade, setFade] = useState(true);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -42,27 +42,25 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="flex h-screen">
-      <div className="w-1/2 flex items-center justify-center  p-12">
-
-
+    <div className="flex flex-col lg:flex-row h-screen mt-24 md:mt-0">
+      {/* Left section (Text and Form) */}
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12">
         <div className="w-full max-w-md space-y-8">
-
           <div className="text-center space-y-2">
-            <div className="flex justify-center mb-12">
+            <div className="flex justify-center mb-8 lg:mb-12">
               <svg
-                className="w-8 h-8 text-[#FF6B00]"
+                className="w-6 h-6 lg:w-8 lg:h-8 text-[#FF6B00]"
                 viewBox="0 0 24 24"
                 fill="currentColor"
               >
                 <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
               </svg>
-              <span className="ml-2 text-2xl font-semibold">COKARA</span>
+              <span className="ml-2 text-xl lg:text-2xl font-semibold">COKARA</span>
             </div>
 
             {/* Apply fade class based on fade state */}
             <h1
-              className={`text-4xl font-bold text-gray-800 min-h-[3rem] transition-opacity duration-500 ${
+              className={`text-3xl lg:text-4xl font-bold text-gray-800 min-h-[3rem] transition-opacity duration-500 ${
                 fade ? "opacity-100" : "opacity-0"
               }`}
             >
@@ -71,7 +69,7 @@ export default function Hero() {
           </div>
 
           <Card className="w-full bg-bg-[#FFFBF5] shadow-sm">
-            <CardContent className="p-6 space-y-4">
+            <CardContent className="p-4 lg:p-6 space-y-4">
               <p className="text-center text-sm text-gray-600">
                 Start using Claude for yourself or your team
               </p>
@@ -99,12 +97,9 @@ export default function Hero() {
                 Continue with Google
               </Button>
 
-         
-           
-                <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-white px-2 text-gray-500">OR</span>
-                </div>
-           
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-white px-2 text-gray-500">OR</span>
+              </div>
 
               <Input type="email" placeholder="name@yourcompany.com" />
               <Button className="w-full bg-[#C84C21] hover:bg-[#B33D15] text-white">
@@ -145,12 +140,11 @@ export default function Hero() {
               </svg>
             </Button>
           </div>
-
         </div>
-
       </div>
 
-      <div className="w-1/2 relative overflow-hidden">
+      {/* Right section (Image Slideshow) */}
+      <div className="w-full lg:w-1/2 relative overflow-hidden min-h-[500px] md:min-h-[600px] lg:min-h-[700px]">
         {images.map((src, index) => (
           <img
             key={index}

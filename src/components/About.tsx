@@ -39,7 +39,7 @@ export default function Component() {
   }
 
   return (
-    <div className="py-24 md:py-48 p-8">
+    <div className="py-24 md:py-48 p-6 lg:p-12 mt-24">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl text-center mb-4">Meet Claude</h1>
         <p className="text-center text-lg mb-12 max-w-2xl mx-auto">
